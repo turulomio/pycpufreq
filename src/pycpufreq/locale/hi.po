@@ -1,50 +1,50 @@
-# Hindi translations for PACKAGE package.
-# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2026.
+# Hindi translations for pycpufreq package.
+# Copyright (C) 2026 turulomio
+# This file is distributed under the same license as the pycpufreq package.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: pycpufreq 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:01+0100\n"
-"PO-Revision-Date: 2026-10-31 09:01+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2026-10-31 09:19+0100\n"
+"PO-Revision-Date: 2026-10-31 09:14+0100\n"
+"Last-Translator: turulomio <turulomio@yahoo.es>\n"
+"Language-Team: Hindi <turulomio@yahoo.es>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Error setting sys_set_cpu_max_scaling_freq"
-msgstr ""
+msgstr "sys_set_cpu_max_scaling_freq सेट करने में त्रुटि"
 
 msgid "Error setting sys_set_cpu_turbo"
-msgstr ""
+msgstr "sys_set_cpu_turbo सेट करने में त्रुटि"
 
 msgid "Is kernel cpufreq configured?:"
-msgstr ""
+msgstr "क्या कर्नेल cpufreq कॉन्फ़िगर किया गया है?:"
 
 msgid "Max cpu freq is {}"
-msgstr ""
+msgstr "अधिकतम सीपीयू आवृत्ति {} है"
 
 msgid "Min cpu freq is {}"
-msgstr ""
+msgstr "न्यूनतम सीपीयू आवृत्ति {} है"
 
 msgid "Current cpu freq is {}"
-msgstr ""
+msgstr "वर्तमान सीपीयू आवृत्ति {} है"
 
 msgid "Changing cpu to maximum scaling freq"
-msgstr ""
+msgstr "सीपीयू को अधिकतम स्केलिंग आवृत्ति में बदला जा रहा है"
 
 msgid "Current cpu max scaling freq is {}"
-msgstr ""
+msgstr "वर्तमान सीपीयू अधिकतम स्केलिंग आवृत्ति {} है"
 
 msgid "Disabling turbo"
-msgstr ""
+msgstr "टर्बो अक्षम किया जा रहा है"
 
 msgid "Enabling turbo"
-msgstr ""
+msgstr "टर्बो सक्षम किया जा रहा है"
 
 msgid "Changing cpu to minimum scaling freq"
-msgstr ""
+msgstr "सीपीयू को न्यूनतम स्केलिंग आवृत्ति में बदला जा रहा है"

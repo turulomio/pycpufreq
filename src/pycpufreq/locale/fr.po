@@ -1,51 +1,50 @@
-# French translations for PACKAGE package.
-# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2026.
+# French translations for pycpufreq package.
+# Copyright (C) 2026 turulomio
+# This file is distributed under the same license as the pycpufreq package.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: pycpufreq 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:01+0100\n"
-"PO-Revision-Date: 2026-10-31 09:01+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2026-10-31 09:19+0100\n"
+"PO-Revision-Date: 2026-10-31 09:14+0100\n"
+"Last-Translator: turulomio <turulomio@yahoo.es>\n"
+"Language-Team: French <turulomio@yahoo.es>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Error setting sys_set_cpu_max_scaling_freq"
-msgstr ""
+msgstr "Erreur lors de la définition de sys_set_cpu_max_scaling_freq"
 
 msgid "Error setting sys_set_cpu_turbo"
-msgstr ""
+msgstr "Erreur lors de la définition de sys_set_cpu_turbo"
 
 msgid "Is kernel cpufreq configured?:"
-msgstr ""
+msgstr "Le cpufreq du noyau est-il configuré ? :"
 
 msgid "Max cpu freq is {}"
-msgstr ""
+msgstr "La fréquence maximale du processeur est {}"
 
 msgid "Min cpu freq is {}"
-msgstr ""
+msgstr "La fréquence minimale du processeur est {}"
 
 msgid "Current cpu freq is {}"
-msgstr ""
+msgstr "La fréquence actuelle du processeur est {}"
 
 msgid "Changing cpu to maximum scaling freq"
-msgstr ""
+msgstr "Changement du processeur vers la fréquence d'échelle maximale"
 
 msgid "Current cpu max scaling freq is {}"
-msgstr ""
+msgstr "La fréquence d'échelle maximale actuelle du processeur est {}"
 
 msgid "Disabling turbo"
-msgstr ""
+msgstr "Désactivation du turbo"
 
 msgid "Enabling turbo"
-msgstr ""
+msgstr "Activation du turbo"
 
 msgid "Changing cpu to minimum scaling freq"
-msgstr ""
+msgstr "Changement du processeur vers la fréquence d'échelle minimale"
