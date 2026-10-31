@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pycpufreq 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:19+0100\n"
-"PO-Revision-Date: 2026-10-31 09:14+0100\n"
+"POT-Creation-Date: 2026-10-31 09:26+0100\n"
+"PO-Revision-Date: 2026-10-31 09:25+0100\n"
 "Last-Translator: turulomio <turulomio@yahoo.es>\n"
 "Language-Team: Hindi <turulomio@yahoo.es>\n"
 "Language: hi\n"
@@ -22,8 +22,17 @@ msgstr "sys_set_cpu_max_scaling_freq सेट करने में त्र�
 msgid "Error setting sys_set_cpu_turbo"
 msgstr "sys_set_cpu_turbo सेट करने में त्रुटि"
 
+msgid "Manage and monitor CPU frequencies and turbo state."
+msgstr "सीपीयू आवृत्तियों और टर्बो स्थिति का प्रबंधन और निगरानी करें।"
+
+msgid "Target final CPU scaling frequency (in kHz). If omitted, maximum frequency is used."
+msgstr "लक्ष्य अंतिम सीपीयू स्केलिंग आवृत्ति (kHz में)। यदि छोड़ दिया जाए, तो अधिकतम आवृत्ति का उपयोग किया जाता है।"
+
 msgid "Is kernel cpufreq configured?:"
 msgstr "क्या कर्नेल cpufreq कॉन्फ़िगर किया गया है?:"
+
+msgid "Invalid frequency: {}. It must be between {} and {} kHz."
+msgstr "अमान्य आवृत्ति: {}। यह {} और {} kHz के बीच होनी चाहिए।"
 
 msgid "Max cpu freq is {}"
 msgstr "अधिकतम सीपीयू आवृत्ति {} है"
@@ -48,3 +57,6 @@ msgstr "टर्बो सक्षम किया जा रहा है"
 
 msgid "Changing cpu to minimum scaling freq"
 msgstr "सीपीयू को न्यूनतम स्केलिंग आवृत्ति में बदला जा रहा है"
+
+msgid "Leaving CPU frequency at {}"
+msgstr "सीपीयू आवृत्ति {} पर छोड़ी जा रही है"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pycpufreq 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:19+0100\n"
-"PO-Revision-Date: 2026-10-31 09:14+0100\n"
+"POT-Creation-Date: 2026-10-31 09:26+0100\n"
+"PO-Revision-Date: 2026-10-31 09:25+0100\n"
 "Last-Translator: turulomio <turulomio@yahoo.es>\n"
 "Language-Team: Russian <turulomio@yahoo.es>\n"
 "Language: ru\n"
@@ -22,8 +22,17 @@ msgstr "Ошибка при установке sys_set_cpu_max_scaling_freq"
 msgid "Error setting sys_set_cpu_turbo"
 msgstr "Ошибка при установке sys_set_cpu_turbo"
 
+msgid "Manage and monitor CPU frequencies and turbo state."
+msgstr "Управление и мониторинг частот процессора и состояния турбо."
+
+msgid "Target final CPU scaling frequency (in kHz). If omitted, maximum frequency is used."
+msgstr "Целевая конечная частота масштабирования процессора (в кГц). Если не указана, используется максимальная частота."
+
 msgid "Is kernel cpufreq configured?:"
 msgstr "Настроен ли cpufreq ядра?:"
+
+msgid "Invalid frequency: {}. It must be between {} and {} kHz."
+msgstr "Недопустимая частота: {}. Она должна быть в диапазоне от {} до {} кГц."
 
 msgid "Max cpu freq is {}"
 msgstr "Максимальная частота процессора: {}"
@@ -48,3 +57,6 @@ msgstr "Включение турбо"
 
 msgid "Changing cpu to minimum scaling freq"
 msgstr "Переключение процессора на минимальную частоту масштабирования"
+
+msgid "Leaving CPU frequency at {}"
+msgstr "Установка частоты процессора на уровне {}"

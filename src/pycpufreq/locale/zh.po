@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pycpufreq 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:19+0100\n"
-"PO-Revision-Date: 2026-10-31 09:14+0100\n"
+"POT-Creation-Date: 2026-10-31 09:26+0100\n"
+"PO-Revision-Date: 2026-10-31 09:25+0100\n"
 "Last-Translator: turulomio <turulomio@yahoo.es>\n"
 "Language-Team: Chinese <turulomio@yahoo.es>\n"
 "Language: zh\n"
@@ -22,8 +22,17 @@ msgstr "设置 sys_set_cpu_max_scaling_freq 时出错"
 msgid "Error setting sys_set_cpu_turbo"
 msgstr "设置 sys_set_cpu_turbo 时出错"
 
+msgid "Manage and monitor CPU frequencies and turbo state."
+msgstr "管理和监控 CPU 频率以及 Turbo 状态。"
+
+msgid "Target final CPU scaling frequency (in kHz). If omitted, maximum frequency is used."
+msgstr "目标最终 CPU 调节频率（单位 kHz）。若省略，则使用最大频率。"
+
 msgid "Is kernel cpufreq configured?:"
 msgstr "内核 cpufreq 是否已配置？:"
+
+msgid "Invalid frequency: {}. It must be between {} and {} kHz."
+msgstr "无效频率：{}。必须介于 {} 和 {} kHz 之间。"
 
 msgid "Max cpu freq is {}"
 msgstr "CPU 最大频率为 {}"
@@ -48,3 +57,6 @@ msgstr "正在启用 Turbo"
 
 msgid "Changing cpu to minimum scaling freq"
 msgstr "正在将 CPU 更改为最小调节频率"
+
+msgid "Leaving CPU frequency at {}"
+msgstr "将 CPU 频率保持在 {}"

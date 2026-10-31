@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pycpufreq 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:19+0100\n"
-"PO-Revision-Date: 2026-10-31 09:14+0100\n"
+"POT-Creation-Date: 2026-10-31 09:26+0100\n"
+"PO-Revision-Date: 2026-10-31 09:25+0100\n"
 "Last-Translator: turulomio <turulomio@yahoo.es>\n"
 "Language-Team: French <turulomio@yahoo.es>\n"
 "Language: fr\n"
@@ -22,8 +22,17 @@ msgstr "Erreur lors de la définition de sys_set_cpu_max_scaling_freq"
 msgid "Error setting sys_set_cpu_turbo"
 msgstr "Erreur lors de la définition de sys_set_cpu_turbo"
 
+msgid "Manage and monitor CPU frequencies and turbo state."
+msgstr "Gérer et surveiller les fréquences du processeur et l'état turbo."
+
+msgid "Target final CPU scaling frequency (in kHz). If omitted, maximum frequency is used."
+msgstr "Fréquence finale cible d'échelle du processeur (en kHz). Si omise, la fréquence maximale est utilisée."
+
 msgid "Is kernel cpufreq configured?:"
 msgstr "Le cpufreq du noyau est-il configuré ? :"
+
+msgid "Invalid frequency: {}. It must be between {} and {} kHz."
+msgstr "Fréquence non valide : {}. Elle doit être comprise entre {} et {} kHz."
 
 msgid "Max cpu freq is {}"
 msgstr "La fréquence maximale du processeur est {}"
@@ -48,3 +57,6 @@ msgstr "Activation du turbo"
 
 msgid "Changing cpu to minimum scaling freq"
 msgstr "Changement du processeur vers la fréquence d'échelle minimale"
+
+msgid "Leaving CPU frequency at {}"
+msgstr "Maintien de la fréquence du processeur à {}"

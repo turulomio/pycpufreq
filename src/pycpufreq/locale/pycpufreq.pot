@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:19+0100\n"
+"POT-Creation-Date: 2026-10-31 09:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,16 @@ msgstr ""
 msgid "Error setting sys_set_cpu_turbo"
 msgstr ""
 
+msgid "Manage and monitor CPU frequencies and turbo state."
+msgstr ""
+
+msgid "Target final CPU scaling frequency (in kHz). If omitted, maximum frequency is used."
+msgstr ""
+
 msgid "Is kernel cpufreq configured?:"
+msgstr ""
+
+msgid "Invalid frequency: {}. It must be between {} and {} kHz."
 msgstr ""
 
 msgid "Max cpu freq is {}"
@@ -48,4 +57,7 @@ msgid "Enabling turbo"
 msgstr ""
 
 msgid "Changing cpu to minimum scaling freq"
+msgstr ""
+
+msgid "Leaving CPU frequency at {}"
 msgstr ""

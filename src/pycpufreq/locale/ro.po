@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pycpufreq 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 09:19+0100\n"
-"PO-Revision-Date: 2026-10-31 09:14+0100\n"
+"POT-Creation-Date: 2026-10-31 09:26+0100\n"
+"PO-Revision-Date: 2026-10-31 09:25+0100\n"
 "Last-Translator: turulomio <turulomio@yahoo.es>\n"
 "Language-Team: Romanian <turulomio@yahoo.es>\n"
 "Language: ro\n"
@@ -22,8 +22,17 @@ msgstr "Eroare la setarea sys_set_cpu_max_scaling_freq"
 msgid "Error setting sys_set_cpu_turbo"
 msgstr "Eroare la setarea sys_set_cpu_turbo"
 
+msgid "Manage and monitor CPU frequencies and turbo state."
+msgstr "Gestionați și monitorizați frecvențele procesorului și starea turbo."
+
+msgid "Target final CPU scaling frequency (in kHz). If omitted, maximum frequency is used."
+msgstr "Frecvența finală țintă de scalare a procesorului (în kHz). Dacă este omisă, se utilizează frecvența maximă."
+
 msgid "Is kernel cpufreq configured?:"
 msgstr "Este configurat cpufreq în nucleu?:"
+
+msgid "Invalid frequency: {}. It must be between {} and {} kHz."
+msgstr "Frecvență nevalidă: {}. Trebuie să fie între {} și {} kHz."
 
 msgid "Max cpu freq is {}"
 msgstr "Frecvența maximă a procesorului este {}"
@@ -48,3 +57,6 @@ msgstr "Se activează turbo"
 
 msgid "Changing cpu to minimum scaling freq"
 msgstr "Se schimbă procesorul la frecvența minimă de scalare"
+
+msgid "Leaving CPU frequency at {}"
+msgstr "Se lasă frecvența procesorului la {}"
