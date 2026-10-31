@@ -1,6 +1,6 @@
 [project]
 name = "pycpufreq"
-version = "0.1.0"
+version = "1.0.0"
 description = "Python library and CLI tool to manage and monitor CPU frequencies and turbo state"
 readme = "README.md"
 license = "GPL-3.0-or-later"
