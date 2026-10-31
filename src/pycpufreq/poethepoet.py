@@ -1,5 +1,7 @@
 from pathlib import Path
 import subprocess
+from pycpufreq.version import __version__
+from pycpufreq.i18n import _
 
 LANGUAGES = ["es", "fr", "ro", "ru", "zh", "hi"]
 PACKAGE_DIR = Path(__file__).resolve().parent
@@ -47,3 +49,22 @@ def translate() -> None:
             ["msgfmt", "-cv", "-o", str(mo_file), str(po_file)],
             check=True,
         )
+
+
+def release() -> None:
+    """Print the step-by-step checklist for publishing a new release."""
+    print(_("New Release:"))
+    print(_("  * Change version and date in src/pycpufreq/version.py"))
+    print(_("  * Change version in pyproject.toml"))
+    print(_("  * Edit Changelog in README.md"))
+    print("  * poe translate")
+    print("  * mcedit src/pycpufreq/locale/es.po")
+    print("  * poe translate")
+    print("  * poe test")
+    print(f"  * git commit -a -m 'pycpufreq-{__version__}'")
+    print("  * git push")
+    print(_("  * Make a new tag in github"))
+    print("  * uv build")
+    print("  * uv publish")
+    print(_("  * Create a new gentoo ebuild with the new version"))
+    print(_("  * Upload to portage repository"))

@@ -3,6 +3,7 @@ name = "pycpufreq"
 version = "0.1.0"
 description = "Python library and CLI tool to manage and monitor CPU frequencies and turbo state"
 readme = "README.md"
+license = "GPL-3.0-or-later"
 authors = [
     { name = "turulomio", email = "turulomio@yahoo.es" }
 ]
@@ -24,4 +25,6 @@ dev = [
 [tool.poe.tasks]
 translate = { script = "pycpufreq.poethepoet:translate", help = "Extract, update and compile gettext catalogs" }
 test = { cmd = "pytest", help = "Run test suite" }
+release = { script = "pycpufreq.poethepoet:release", help = "Print instructions for releasing a new version" }
+
 
