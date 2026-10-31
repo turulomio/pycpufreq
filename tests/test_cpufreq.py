@@ -118,3 +118,66 @@ def test_gettext_translation():
     _es = t_es.gettext
     assert _es("Disabling turbo") == "Desactivando turbo"
     assert _es("Enabling turbo") == "Activando turbo"
+
+
+def test_main_unconfigured(monkeypatch, tmp_path: Path):
+    from pycpufreq.commands import main
+    monkeypatch.setattr("pycpufreq.commands.is_cpufreq_configured", lambda: False)
+    assert main([]) == 1
+
+
+def test_main_invalid_frequency(monkeypatch, capsys):
+    from pycpufreq.commands import main
+    monkeypatch.setattr("pycpufreq.commands.is_cpufreq_configured", lambda: True)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_min_freq", lambda: 800000)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_max_freq", lambda: 3200000)
+
+    # Below minimum
+    code = main(["500000"])
+    assert code == 2
+    err = capsys.readouterr().err
+    assert "500000" in err
+
+    # Above maximum
+    code = main(["4500000"])
+    assert code == 2
+    err = capsys.readouterr().err
+    assert "4500000" in err
+
+
+def test_main_default_leaves_max_freq(monkeypatch):
+    from pycpufreq.commands import main
+    recorded_freqs = []
+
+    monkeypatch.setattr("pycpufreq.commands.is_cpufreq_configured", lambda: True)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_min_freq", lambda: 800000)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_max_freq", lambda: 3200000)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_current_freq", lambda: 1800000)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_max_scaling_freq", lambda: 3200000)
+    monkeypatch.setattr("pycpufreq.commands.sys_set_cpu_max_scaling_freq", lambda freq: recorded_freqs.append(freq))
+    monkeypatch.setattr("pycpufreq.commands.sys_set_cpu_turbo", lambda val: True)
+    monkeypatch.setattr("time.sleep", lambda s: None)
+
+    code = main([])
+    assert code == 0
+    # The last frequency set must be the maximum frequency (3200000)
+    assert recorded_freqs[-1] == 3200000
+
+
+def test_main_valid_custom_frequency(monkeypatch):
+    from pycpufreq.commands import main
+    recorded_freqs = []
+
+    monkeypatch.setattr("pycpufreq.commands.is_cpufreq_configured", lambda: True)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_min_freq", lambda: 800000)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_max_freq", lambda: 3200000)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_current_freq", lambda: 1800000)
+    monkeypatch.setattr("pycpufreq.commands.sys_get_cpu_max_scaling_freq", lambda: 2000000)
+    monkeypatch.setattr("pycpufreq.commands.sys_set_cpu_max_scaling_freq", lambda freq: recorded_freqs.append(freq))
+    monkeypatch.setattr("pycpufreq.commands.sys_set_cpu_turbo", lambda val: True)
+    monkeypatch.setattr("time.sleep", lambda s: None)
+
+    code = main(["2000000"])
+    assert code == 0
+    # The last frequency set must be 2000000
+    assert recorded_freqs[-1] == 2000000

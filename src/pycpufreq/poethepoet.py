@@ -1,5 +1,5 @@
-from os import makedirs, system
 from pathlib import Path
+import subprocess
 
 LANGUAGES = ["es", "fr", "ro", "ru", "zh", "hi"]
 PACKAGE_DIR = Path(__file__).resolve().parent
@@ -9,21 +9,41 @@ POT_FILE = LOCALE_DIR / "pycpufreq.pot"
 
 def translate() -> None:
     """Extract translatable strings, update PO catalogs, and compile MO binary files."""
-    makedirs(LOCALE_DIR, exist_ok=True)
-    python_files = " ".join(f'"{p}"' for p in PACKAGE_DIR.glob("*.py") if p.name != "poethepoet.py")
-    system(
-        f"xgettext -L Python --no-wrap --no-location --from-code='UTF-8' "
-        f"-o \"{POT_FILE}\" {python_files}"
+    LOCALE_DIR.mkdir(parents=True, exist_ok=True)
+    python_files = [str(p) for p in PACKAGE_DIR.glob("*.py") if p.name != "poethepoet.py"]
+
+    subprocess.run(
+        [
+            "xgettext",
+            "-L", "Python",
+            "--no-wrap",
+            "--no-location",
+            "--from-code=UTF-8",
+            "-o", str(POT_FILE),
+            *python_files,
+        ],
+        check=True,
     )
 
     for lang in LANGUAGES:
         lang_dir = LOCALE_DIR / lang / "LC_MESSAGES"
-        makedirs(lang_dir, exist_ok=True)
+        lang_dir.mkdir(parents=True, exist_ok=True)
         po_file = LOCALE_DIR / f"{lang}.po"
 
         if not po_file.exists():
-            system(f"msginit --no-translator -l {lang}.UTF-8 -i \"{POT_FILE}\" -o \"{po_file}\" 2>/dev/null || cp \"{POT_FILE}\" \"{po_file}\"")
+            res = subprocess.run(
+                ["msginit", "--no-translator", "-l", f"{lang}.UTF-8", "-i", str(POT_FILE), "-o", str(po_file)],
+                capture_output=True,
+            )
+            if res.returncode != 0:
+                po_file.write_bytes(POT_FILE.read_bytes())
 
-        system(f"msgmerge -N --no-wrap -U \"{po_file}\" \"{POT_FILE}\"")
+        subprocess.run(
+            ["msgmerge", "-N", "--no-wrap", "-U", str(po_file), str(POT_FILE)],
+            check=True,
+        )
         mo_file = lang_dir / "pycpufreq.mo"
-        system(f"msgfmt -cv -o \"{mo_file}\" \"{po_file}\"")
+        subprocess.run(
+            ["msgfmt", "-cv", "-o", str(mo_file), str(po_file)],
+            check=True,
+        )
