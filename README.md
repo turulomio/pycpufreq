@@ -60,16 +60,20 @@ uv run pycpufreq
 
 ## Running Tests
 
-Execute pytest with uv:
+Execute pytest with uv or poe:
 
 ```bash
 uv run pytest
+# or
+poe test
 ```
 
 ## Translations
 
-Extract strings, update PO catalogs, and compile MO binary catalogs:
+Extract strings, update PO catalogs, and compile MO binary catalogs using the configured task:
 
 ```bash
-uv run python translate.py
+poe translate
+# or via uv:
+uv run poe translate
 ```
